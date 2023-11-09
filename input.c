@@ -1,8 +1,8 @@
 #include "shell.h"
 /**
  * user_input - read user input
- * str: string input
- * size: size of string
+ * @str: string input
+ * @size: size of string
  * Return: void
  */
 void user_input(char *str, size_t size)
@@ -20,5 +20,5 @@ void user_input(char *str, size_t size)
 		exit(EXIT_FAILURE);
 		}
 	}
-	str[strcspn(str, "\n")] = '\0'; /* get rid of new line, if the string has a new line it will getvout of the loop */
+	str[strcspn(str, "\n")] = '\0'; /* get rid of new line in d string */
 }

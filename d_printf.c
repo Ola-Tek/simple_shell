@@ -1,7 +1,7 @@
 #include "shell.h"
 /**
  * d_printf - performs the same function as printf
- * str: string input
+ * @str: string input
  *
  * Return: void
  */

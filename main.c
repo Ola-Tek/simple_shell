@@ -1,7 +1,6 @@
 #include "shell.h"
 /**
  * main - main function
- * 
  * Return: void
  */
 int main(void)
@@ -12,5 +11,6 @@ int main(void)
 	{
 	show_prompt();
 	user_input(str, sizeof(str));
+	command_exec(str);
 	}
 }
