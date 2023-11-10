@@ -1,4 +1,5 @@
 #include "shell.h"
+
 /**
  * user_input - read user input
  * @str: string input
@@ -7,18 +8,17 @@
  */
 void user_input(char *str, size_t size)
 {
-	if (fgets(str, size, stdin) == NULL)
+	ssize_t read_Bytes = read(STDIN_FILENO, str, size);
+
+	if (read_Bytes == -1)
 	{
-		if (feof(stdin)) /* endoffile*/
-		{
-		d_printf("\n");
-		exit(EXIT_SUCCESS);
-		}
-		else
-		{
-		d_printf("Error while reading input. \n");
+		perror("read");
 		exit(EXIT_FAILURE);
-		}
 	}
-	str[strcspn(str, "\n")] = '\0'; /* get rid of new line in d string */
+	else if (read_Bytes == 0)
+	{
+		d_printf("\n");/*shows the end of a string and prints a new line*/
+		exit(EXIT_SUCCESS);
+	}
+	str[read_Bytes - 1] = '\0'; /*to null terminate the string*/
 }

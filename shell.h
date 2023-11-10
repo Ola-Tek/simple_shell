@@ -1,8 +1,8 @@
 #ifndef _SHELL_H
 #define _SHELL_H
 
-#define MAX_PATH = 1024;
-#define MAX_INPUT = 1024;
+#define MAX_PATH 1024
+#define MAX_INPUT 1024
 
 #include <stdio.h>
 #include <stdlib.h>
