@@ -16,5 +16,6 @@ void d_printf(const char *str);
 void user_input(char *str, size_t size);
 void show_prompt(void);
 void command_exec(const char *str);
+int _strlen(const char *str);
 
 #endif
