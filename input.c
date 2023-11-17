@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * user_input - read user input
  * @str: string input

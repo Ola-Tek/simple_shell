@@ -9,7 +9,7 @@ int _strlen(const char *str)
 {
 	int i = 0; /* to iterate through str */
 
-	while (str[i])
+	while (str[i]) /* iterate through until NULL */
 		i++;
 
 	return (i);
